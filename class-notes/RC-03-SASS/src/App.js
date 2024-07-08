@@ -1,9 +1,12 @@
 import "./App.scss";
+import Card from "./component/card/Card";
+import Header from "./component/header/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1>DE09</h1>
+      <Header />
+      <Card/>
     </div>
   );
 }
