@@ -21,7 +21,7 @@ import { useState } from "react";
 import Events from "../1-events-hooksintro/Events";
 
 const Hooks = () => {
-  const [sayac, setSayac] = useState(0);
+  const [sayac, setSayac] = useState(0); // sayac = 0
   const [kisi, setKisi] = useState({
     isim: "mustafa",
     meslek: "developer",
@@ -29,7 +29,7 @@ const Hooks = () => {
     renk: "red",
   });
 
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(true); // toggle = true
 
   const arttir = () => {
     setSayac(sayac + 1); // sayac+=1
@@ -109,7 +109,7 @@ const Hooks = () => {
         Changeyas
       </button>
 
-      <button onClick={() => setToggle(!toggle)} className="btn btn-secondary">
+      <button onClick={()=>setToggle(!toggle)} className="btn btn-secondary">
         SHOW
       </button>
 

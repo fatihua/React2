@@ -8,7 +8,7 @@ let count = 0;
 
 const arttır =()=>{
     count++;
-    console.log(count);
+    // console.log(count);
     document.querySelector("span").textContent=count
 }
 
