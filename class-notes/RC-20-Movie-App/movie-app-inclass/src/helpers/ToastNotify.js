@@ -1,5 +1,5 @@
  //https://fkhadra.github.io/react-toastify/introduction
- import { ToastContainer, toast } from 'react-toastify';
+ import { toast } from 'react-toastify';
 
 export const toastSuccess = (msg) => {
     toast.success(msg, {
@@ -10,8 +10,6 @@ export const toastSuccess = (msg) => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "light",
-    transition: Bounce,
     });
 }
 
