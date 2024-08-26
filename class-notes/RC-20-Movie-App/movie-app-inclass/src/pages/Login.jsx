@@ -7,11 +7,11 @@ const Login = () => {
   const [password, setPassword] = useState();
  
 
-  const { signIn } = useContext(AuthContextt);
+  const { signIn, signUpGoogle, forgotPassword } = useContext(AuthContextt);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signIn(email, password)
+signIn(email,password)
    
   };
 
@@ -48,14 +48,14 @@ const Login = () => {
 
           <div className="flex justify-between">
             <span
-             
               className="py-3 font-[0.75em] cursor-pointer decoration-none text-gray-500 hover:text-[#ff4b45]"
+              onClick={() => forgotPassword(email)}
             >
               Forgot Password
             </span>
             <Link
               className="py-3 font-[0.75em] cursor-pointer decoration-none text-gray-500 hover:text-[#ff4b45]"
-            to="/register"
+              to="/register"
             >
               Sign Up
             </Link>
@@ -67,6 +67,7 @@ const Login = () => {
           <button
             type="button"
             className="btn-danger flex justify-between text-center "
+            onClick={() => signUpGoogle()}
           >
             Continue with Google
             <GoogleIcon color="currentColor" />
