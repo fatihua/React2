@@ -3,12 +3,15 @@ import TypoButtons from '../components/TypoButtons'
 import CardGrid from '../components/CardGrid'
 import Navbar from '../components/Navbar'
 import TextFieldComp from '../components/TextFieldComp'
+import { Card } from '@mui/material'
 
 const Home = () => {
   return (
     <>
+    <Navbar/>
     {/* <TypoButtons/> */}
-    <TextFieldComp/>
+    {/* <TextFieldComp/> */}
+    <CardGrid/>
     </>
   );
 }
