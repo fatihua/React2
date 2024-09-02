@@ -1,16 +1,14 @@
-
-
+import { useSelector } from "react-redux";
 import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-
+  const { gorevler } = useSelector((state)=>state.todoReducer)
 
   return (
     <div>
       <div>
-        {[].map((gorev) => (
-          <TodoItem 
-         />
+        {gorevler.map((gorev) => (
+          <TodoItem gorev={gorev}/>
         ))}
       </div>
     </div>

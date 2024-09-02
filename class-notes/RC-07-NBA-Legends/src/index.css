@@ -16,10 +16,12 @@ body{
 .player-kart{
     height: 400px;
     max-width: 280px;
+    /* border: 2px solid red; */
 }
 .player-resim{
     height: 350px;
     transition: transform 0.9s;
+    /* border: 2px solid red; */
     
 }
 .player-kart:hover{
