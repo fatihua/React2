@@ -9,6 +9,8 @@ import {
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
+
+
 const useAuthCall = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -17,10 +19,10 @@ const useAuthCall = () => {
     dispatch(fetchStart());
     try {
       const { data } = await axios.post(
-        "https://10002.fullstack.clarusway.com/users/",
+        "https://19109.fullstack.clarusway.com/users",
         userInfo
       );
-      console.log("register", data);
+      console.log(data);
       dispatch(registerSuccess(data));
       navigate("/stock");
     } catch (error) {

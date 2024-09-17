@@ -85,9 +85,9 @@ const Register = () => {
               password: "",
             }}
             validationSchema={SignupSchema}
-            onSubmit={(values, actions) => {
+            onSubmit={(values) => {
               console.log(values)
-              // register(values);
+              register(values);
               // actions.resetForm();// formu temizleme yapar.
               // actions.setSubmitting(false);// isSubmitting değerini tekrar false a çeker
             }}

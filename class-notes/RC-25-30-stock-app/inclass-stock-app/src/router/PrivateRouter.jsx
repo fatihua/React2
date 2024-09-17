@@ -7,3 +7,8 @@ const PrivateRouter = () => {
 };
 
 export default PrivateRouter;
+
+
+// state burada store anlamına geliyor, onu getiriyor /
+
+// state.auth = store'da belirtilen reducer içerisindeki auth'a karşılık geliyor/
