@@ -5,6 +5,7 @@ import {
   fetchStart,
   registerSuccess,
   loginSuccess,
+  logoutSuccess
 } from "../features/authSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -56,8 +57,10 @@ const useAuthCall = () => {
           Authorization:`Token ${token}`
         }
       })
+      dispatch(logoutSuccess())
       toastSuccessNotify("Logout performed");
       navigate("/");
+
     } catch (error) {
       dispatch(fetchFail());
       console.log(error);
