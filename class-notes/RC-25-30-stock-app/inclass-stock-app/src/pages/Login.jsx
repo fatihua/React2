@@ -45,7 +45,7 @@ const Login = () => {
           <Formik
             initialValues={{ email: "", password: "" }}
             validationSchema={loginScheme}
-            onSubmit={(values, actions) => {
+            onSubmit= {(values, actions) => {
               login(values);
               actions.resetForm();
               actions.setSubmitting(false);

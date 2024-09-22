@@ -13,7 +13,12 @@ export const loginScheme = object({
     .required("password zorunludur")
 })
 
-const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
+const LoginForm = ({ 
+  values, 
+  handleChange, 
+  errors, 
+  touched, 
+  handleBlur }) => {
   const { loading } = useSelector(state => state.auth);// storeda yaptığımız fetchStart işlemini kullanmış olduk.
   return (
     <Form>

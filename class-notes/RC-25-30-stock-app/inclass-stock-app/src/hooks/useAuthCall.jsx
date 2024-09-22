@@ -15,6 +15,7 @@ const useAuthCall = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { token } = useSelector((store) => store.auth);
+
   const register = async (userInfo) => {
     dispatch(fetchStart());
     try {
@@ -33,7 +34,7 @@ const useAuthCall = () => {
     dispatch(fetchStart());
     try {
       const { data } = await axios.post(
-        `https://10002.fullstack.clarusway.com/auth/login/`,
+        "https://19109.fullstack.clarusway.com/auth/login",
         userInfo
       );
       dispatch(loginSuccess(data));
@@ -50,6 +51,11 @@ const useAuthCall = () => {
   const logout = async () => {
     dispatch(fetchStart());
     try {
+      await axios("https://19109.fullstack.clarusway.com/auth/logout", {
+        headers:{
+          Authorization:`Token ${token}`
+        }
+      })
       toastSuccessNotify("Logout performed");
       navigate("/");
     } catch (error) {
