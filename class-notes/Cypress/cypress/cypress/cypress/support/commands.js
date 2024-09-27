@@ -23,3 +23,23 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('[data-test="loginHeader"]').should('be.visible').contains('recipe')
+    cy.get('[data-test="loginName"]').should('be.visible').type('Anthony')
+    cy.get('[data-test="loginPassword"]').should('be.visible').type('Clarusway')
+    cy.get('[data-test="loginSbmt"]').should('be.visible').click()
+    cy.url().should('include', '/home')
+  })
+
+  Cypress.Commands.add('home', () => {
+    cy.get("[data-test='homeSearch']").type("r")
+        cy.get("[data-test='homeSearchBtn']").click({ force: true });
+        
+        cy.get("[data-test='cardHeader']").should("be.visible")
+        cy.get("[data-test='cardImage']").should("be.visible")
+        cy.get("[data-test='cardBtn']").should("be.visible").first().click({ force: true });
+        cy.url().should("include", "/details");
+  })
+

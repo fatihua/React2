@@ -8,9 +8,9 @@ const Header = ({ setQuery, getData, mealTypes, setMeal }) => {
   return (
     <div>
       
-      <HeaderContainer>
+      <HeaderContainer data-test = "recipeHeader">
       {user && <UserHeader>{`Hi,${user ? user.username.toUpperCase() : "Anthony"}! Welcome to my recipe app!`}</UserHeader>}
-      <MainHeader>Food App</MainHeader>
+      <MainHeader data-test = "recipeSubHeader">Food App</MainHeader>
       
       <Form
         setQuery={setQuery} 
