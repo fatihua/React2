@@ -111,7 +111,9 @@ function Dashboard (props) {
           borderRadius:"0.5rem"
         }}
       >
-        <Toolbar>
+        <Toolbar 
+        // sx={{display:"flex", justifyContent:"space-between"}}
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -121,10 +123,31 @@ function Dashboard (props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography 
+            variant="h6" 
+            noWrap component="div" 
+            sx={{flexGrow:1}}>
             Stock App
           </Typography>
-          <Button color="inherit" onClick={logout} sx={{"&:hover" : {backgroundColor:"secondary.second", color:"white"}}}>Logout <LogoutIcon/>
+          <Button 
+            color="inherit" 
+            onClick={logout} 
+            // endIcon={<LogoutIcon/>}
+            sx={{
+                "&:hover" : {backgroundColor:"secondary.second", 
+                color:"white",
+                "& .MuiSvgIcon-root":{
+                  backgroundColor:"red"
+                }
+              },
+              "& .MuiSvgIcon-root":{
+                ml:1
+              },
+              // marginLeft:"auto"
+            }}
+          >Logout <LogoutIcon sx={{"&:hover":{
+            color:"blue"} 
+          }}/>
           </Button>
         </Toolbar>
       </AppBar>
