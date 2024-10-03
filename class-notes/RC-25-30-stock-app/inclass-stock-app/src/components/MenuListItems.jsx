@@ -57,7 +57,7 @@ const MenuListItems = () => {
   return (
     <div>
       <Toolbar />
-      <Divider />
+      {/* <Divider /> */}
       <List>
         {links.map((item, index) => (
           <ListItem key={item.title} disablePadding>
@@ -84,7 +84,7 @@ const MenuListItems = () => {
                 mr:2,
                 mask:`url(${item.icon})
                 no-repeat center / contain`,
-                bgcolor:"red"
+                bgcolor:"blue"
               }}/>
               <ListItemText primary={item.title} />
             </ListItemButton>
