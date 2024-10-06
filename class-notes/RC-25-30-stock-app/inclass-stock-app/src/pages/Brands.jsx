@@ -2,10 +2,13 @@ import React, { useEffect } from 'react'
 import useStockCall from '../hooks/useStockCall'
 
 const Brands = () => {
-  const {getBrands} = useStockCall()
+  const {
+    // getBrands, 
+    getStockData} = useStockCall()
 
   useEffect(()=>{
-    getBrands()
+    // getBrands()
+    getStockData("brands")
   },[])
   return (
     <div>Brands</div>
