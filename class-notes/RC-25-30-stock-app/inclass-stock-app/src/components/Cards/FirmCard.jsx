@@ -8,9 +8,11 @@ import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+const btnStyle = {cursorPointer:"cursor", "&:hover":{color:"red"}}
+
 export default function FirmCard({_id, name, phone, address, image}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ height:390, display:"flex", flexDirection:"column", justifyContent:"space-between", padding:"0.5rem"}}>
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}
@@ -31,9 +33,9 @@ export default function FirmCard({_id, name, phone, address, image}) {
         </Typography>
       </CardContent>
       
-      <CardActions>
-        <EditIcon/>
-        <DeleteIcon/>
+      <CardActions sx={{justifyContent:"center", gap:2}}>
+        <EditIcon sx={btnStyle}/>
+        <DeleteIcon sx={btnStyle}/>
       </CardActions>
     </Card>
   );
